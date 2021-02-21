@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css?family=Assistant|Barlow Semi Condensed");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+*{
+  border-width: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+/*h1, h2, h3, h4, h5, h6, p, a, label, li, td, th, #billtable, input, select, textarea{
+  font-family: "Barlow Semi Condensed", sans-serif;
+}*/
+@media only screen and (max-width: 500px){
+  /* h1{
+    background-color: pink;
+  } */
+}
+h1{
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+h2{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+h3{
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+a, p, label, li, td, th, #billtable{
+  font-size: 20px;
+}
+p{
+  margin-bottom: 10px;
+}
+header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  padding: 5vh 0px 2vh 4vw;
+}
+#logo{
+  height: 15vh;
+}
+nav{
+  overflow-y: hidden;
+  background-color: #003bff;
+  border-bottom: 4px solid #001e84;
+  min-height: 42px;
+}
+nav ul{
+  display: inline-block;
+  padding: 0px;
+  margin-top: 10px;
+  list-style: none;
+}
+nav ul li{
+  display: inline;
+  margin: 10px;
+  padding: 20px 10px;
+}
+nav ul li a:link{
+  border-width: 0;
+  padding: 0;
+  margin: 0px;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: border 0.5s;
+}
+nav ul li a:visited{
+  color: white;
+}
+nav ul li a:hover{
+  background-color: rgba(255,255,255,0.15);
+   border-bottom: 3px solid white;
+}
+#current_button{
+  background-color: rgba(255,255,255,0.3);
+}
+article{
+  height: 100vh;
+  padding: 5vh 10vw;
+  overflow-y: auto;
+  background-color: #c8c8ff;
+}
+input, select, textarea{
+  margin: 5px 0px;
+  font-size: 18px;
+  height: 30px;
+}
+input[type="text"], input[type="date"], input[type="number"], input[type="search"], input[type="password"], input[type="email"], textarea, select{
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+}
+input[type="submit"], input[type="button"]{
+  padding: 0px 12px;
+  /*background-color: ;*/
+  border-width: 2px;
+  /*border-color: initial;*/
+}
+.fielddropdown input{
+  margin: 0;
+}
+.fielddropdown{
+  position: relative;
+  display: inline-block;
+}
+.fielddropdown .items{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  overflow-y: auto;
+  list-style: none;
+  background-color: white;
+  border: 1px solid #d4d4d4;
+  border-width: 0 1px;
+  box-shadow: 5px 5px 20px black;
+}
+.fielddropdown .items.flowup{
+  top: initial;
+  bottom: 100%;
+  box-shadow: 5px -5px 20px black;
+}
+.fielddropdown .items div{
+  border-top: none;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 8px 5px;
+}
+.fielddropdown .items.flowup div{
+  border-top: 1px solid #d4d4d4;
+  border-bottom: none;
+}
+.fielddropdown .items div:hover{
+  background-color: rgba(0,0,0,0.2);
+}
+/*.fielddropdown .items li.active{
+  background-color: blue;
+}*/
+.error{
+  text-align: center;
+  color: red;
+}
+/* Custom checkboxes (based on this tutorial: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp) */
+/* Customize the label (the container) */
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+  background-color: rgba(255,255,255,0.7);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: #3333d6;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark::after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

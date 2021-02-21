@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Encode Sans Condensed");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body{
+  overflow: hidden;
+}
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#sidebar_button{
+  display: inline-block;
+  margin: 8px 10px 0px;
+}
+#sidebar_button i{
+  font-size: 30px;
+}
+#main_buttons{
+  display: inline-block;
+  margin: auto;
+}
+#feedbutton{
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+#feedamount{
+  position: absolute;
+  right: 25px;
+  bottom: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 7px;
+  background-color: red;
+}
+#feedamount label{
+  font-size: 12px;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  margin: auto;
+}
+.feedpanel{
+  position: fixed;
+  right: 0px;
+  border: 1px solid black;
+  background-color: #8794e5;
+  width: 30pc;
+  height: 50vh;
+  overflow-y: auto;
+  z-index: 2;
+}
+.feedpanel ul{
+  list-style: none;
+}
+.feedpanel ul li{
+  padding: 10px 5px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  word-wrap: break-word;
+}
+.feedpanel ul li.unread{
+  font-weight: bolder;
+  color: white;
+}
+.feedpanel a.closemessage:link{
+  float: right;
+  color: black;
+}
+.feedpanel a.closemessage:visited{
+  color: black;
+}
+.feedpanel a.closemessage:hover{
+  color: white;
+}
+header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  padding: 0px 0px 2vh 0px;
+}
+.heading{
+  margin-top: 5vh;
+  margin-left: 6vw;
+}
+#totallabel{
+  margin-top: 5vh;
+  margin-right: 6vw;
+}
+.sidebar{
+  float: left;
+  height: 100vh;
+  padding: 5vh 2vw;
+  overflow-y: auto;
+  background-color: #a0a0cc;
+  border-right: 5px solid #8080a3;
+}
+article#dashboard{
+  padding: 5vh 0px;
+}
+article#dashboard table{
+  border-collapse: collapse;
+}
+article#dashboard tr, article#dashboard thead{
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+article#dashboard th, article#dashboard td{
+  padding: 10px 3vw;
+  text-align: center;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+#billtable{
+  width: 80%;
+  margin: auto;
+  overflow-x: auto;
+}
+#billtable #fieldheader{
+  display: inline-flex;
+  width: 100%;
+  border: 1px solid black;
+  border-width: 0px 0px 1px;
+}
+#billtable #fieldheader div:hover{
+  background-color: rgba(0,0,0,0.15);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#billtable #fieldheader .paycell:hover{
+  background-color: rgba(0,0,0,0);
+}
+#billtable .billrows{
+  display: inline-flex;
+  width: 100%;
+  border: 1px solid grey;
+  border-width: 0px 0px 1px;
+}
+#billtable .billrows:hover{
+  background-color: rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+#billtable .paid{
+  color: grey;
+}
+#billtable .billrows div{
+  display: inherit;
+  margin: 10px 0px;
+  padding: 5px 0px 5px 4px;
+}
+
+#billtable #fieldheader div{
+  display: inherit;
+  margin: 10px 0px;
+  padding: 5px 0px 5px 4px;
+}
+#billtable .namecell{
+  width: 50%;
+  border-right: 1px solid grey;
+}
+#billtable .outstandingcell{
+  display: inherit;
+  width: 20%;
+  border-right: 1px solid grey;
+}
+#billtable .duecell{
+  display: inherit;
+  width: 20%;
+  border-right: 1px solid grey;
+}
+#billtable .paycell{
+  display: inherit;
+  width: 8%;
+}
+#billtable .paycell a:link{
+  text-decoration: none;
+  color: white;
+  background-color: green;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+#billtable .paycell a:visited{
+  color: white;
+}
+article h2, .sidebar h2{
+  border-bottom: 1px solid black;
+}
+textarea{
+  resize: vertical;
+  height: 5pc;
+}
+/* #categorylist{
+  list-style: none;
+  padding-left: 15px;
+}
+#categorylist li{
+  border: 1px solid #666666;
+  border-width: 1px 0px;
+  padding: 5px 0px 5px 5px;
+} */
+.billpanel{
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: stretch;
+  padding: 5px 2vw;
+  background-color: rgba(0,0,0,0.1);
+}
+#owner_date{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#progressbar{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  margin: 5px 2vw;
+  height: 30px;
+  border-radius: 5px;
+}
+#paidbar{
+  float: left;
+  display: flex;
+  background-color: green;
+  width: 75%;
+  height: 100%;
+  border-radius: 5px;
+}
+#remainingbar{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.progressbarlabels{
+  display: inline-flex;
+  justify-content: space-between;
+}
+article form, .sidebar form{
+  display: flex;
+  flex-flow: column nowrap;
+}
+.formfield{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #666666;
+  padding: 10px 0px;
+}
+.formfield input, .formfield textarea, .formfield select, .fielddropdown{
+  width: 50%;
+}
+.formfield .fielddropdown input{
+  width: 100%;
+}
+.formfield input[type="range"]{
+  width: 100%;
+}
+.formfield #shares{
+  width: 50%;
+}
+.formfield #shares label{
+  width: 100%;
+}
+.formfield input[type="checkbox"], .formfield input[type="submit"], .formfield input[type="button"]{
+  width: initial;
+}
+.formfield ul{
+  list-style: none;
+}
+.fieldname{
+  padding-right: 2vw;
+}
+.shade{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 3;
+}
+.popup{
+  display: block;
+  position: relative;
+  top: -70vh;
+  max-width: 40vw;
+  max-height: 70vh;
+  background-color: #c8c8ff;
+  box-shadow: 10px 10px 5px black;
+  overflow: visible;
+  transition: top 1s ease;
+}
+.popupcontainer{
+  display: block;
+  margin: auto;
+  padding: 30px 20px;
+}
+.popupcontainer li{
+  list-style: none;
+  padding: 5px 0px;
+  border-bottom: 1px solid black;
+}
+#verifypassdiv{
+  width: 60%;
+}
+#newgroupformdiv input[type="text"], #newgroupformdiv input[type="search"], #newgroupformdiv .fielddropdown{
+  width: 100%;
+}
+.loading{
+  display: block;
+  margin: auto;
+}
